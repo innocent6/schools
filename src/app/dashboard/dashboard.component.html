@@ -1,0 +1,11 @@
+
+<h2>Top Schools</h2>
+<div class="school-menu">
+  <a *ngFor="let shule of schools" 
+    routerLink="/detail/{{shule.id}}">
+    {{shule.school_name}}
+  </a>
+</div>
+
+<app-shule-search></app-shule-search>
+<mat-slide-toggle>Toggle me!</mat-slide-toggle>

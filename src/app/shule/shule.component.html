@@ -1,0 +1,61 @@
+<h2>All Schools</h2>
+<ul class="schools">
+  <li *ngFor="let shule of school">
+
+    <a routerLink="/detail/{{shule.id}}">
+    
+      <span class="badge">{{shule.id}}</span>
+      {{shule.school_name}}
+     
+    </a>
+    
+
+<button type="button" class="delete" title="delete school"(click)="delete(shule)">Delete</button>
+
+  </li>
+</ul>
+
+<div>
+  <label for="new-school">School name: </label>
+  <input id="new-school" #schoolName /><br>
+  <label for="new-school">Address: </label>
+  <input id="adress" #adress /><br>
+  <label for="new-school">Location: </label>
+  <input id="location" #location />
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button" (click)="add(schoolName.value,adress.value,location.value); schoolName.value='';adress.value='';location.value=''">
+    Add School
+  </button><br>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <app-shule-detail [shule]="selectedShule"></app-shule-detail>
+  --->
+
+
+
+<!-- <h2>{{shule.school_name | uppercase}} Details</h2>
+<div><span>id:</span>{{shule.id}}</div>
+<div>
+    <label for="school_name">Shool name: </label>
+    <input id="school_name" [(ngModel)]="shule.school_name" placeholder="school name">
+  </div>
+ --->
+
+<!--
+<h2>{{shule.school_name | uppercase}} Details</h2>
+<div><span>id:</span>{{shule.id}}</div>
+<div><span>school_name:</span>{{shule.school_name}}</div>
+-->
+

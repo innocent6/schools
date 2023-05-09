@@ -1,0 +1,12 @@
+label{
+   color:rgb(26, 188, 209)
+  }
+
+  button {
+    margin-top: 20px;
+    background-color:rgb(209, 130, 28);
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+

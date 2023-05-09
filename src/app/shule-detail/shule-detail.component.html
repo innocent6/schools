@@ -1,0 +1,25 @@
+<div *ngIf="shule">
+    <h2>{{shule.school_name | uppercase}} Details</h2>
+    <div><span>id: {{shule.id}}</span></div>
+
+    <div>
+      <label for="school_name">School Name: </label>
+      <input id="school_name" [(ngModel)]="shule.school_name" placeholder="school name">
+    </div>
+
+    <div> 
+      <label for ="adress"><span>Address: </span></label>
+      <input id="adress" [(ngModel)]="shule.adress" placeholder="Address">
+    </div>
+
+    <div> 
+      <label for ="location"><span>Location :</span> </label>
+      <input id="location" [(ngModel)]="shule.location" placeholder="Location">
+    </div>
+    
+    
+    <button type="button" (click)="goBack()">go back</button>
+    <div><button type="button" (click)="save()">save</button></div>
+  
+
+  </div>
